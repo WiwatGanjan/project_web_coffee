@@ -8,13 +8,14 @@
 </head>
 <body>
 
-  <!-- ===== HEADER (เดียวกับ index.html) ===== -->
+  <!-- ===== HEADER ===== -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="logo">☕ ชื่อร้านกาแฟ</a>
+      <a href="index.html" class="logo">☕ <span data-th="ชื่อร้านกาแฟ" data-en="Coffee Shop Name">ชื่อร้านกาแฟ</span></a>
       <nav class="nav">
-        <a href="index.html">หน้าหลัก</a>
-        <a href="info.html">ข้อมูลร้าน</a>
+        <a href="index.html" data-th="หน้าหลัก" data-en="Home">หน้าหลัก</a>
+        <a href="info.html" data-th="ข้อมูลร้าน" data-en="About">ข้อมูลร้าน</a>
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">EN</button>
       </nav>
     </div>
   </header>
@@ -22,8 +23,8 @@
   <!-- ===== PAGE TITLE ===== -->
   <section class="page-title">
     <div class="container">
-      <h1>ข้อมูลร้าน</h1>
-      <p>รายละเอียด ที่ตั้ง เวลาเปิด-ปิด และเมนูกาแฟของเรา</p>
+      <h1 data-th="ข้อมูลร้าน" data-en="Shop Information">ข้อมูลร้าน</h1>
+      <p data-th="รายละเอียด ที่ตั้ง เวลาเปิด-ปิด และเมนูกาแฟของเรา" data-en="Details, location, opening hours, and our coffee menu.">รายละเอียด ที่ตั้ง เวลาเปิด-ปิด และเมนูกาแฟของเรา</p>
     </div>
   </section>
 
@@ -33,12 +34,12 @@
 
       <!-- คอลัมน์ซ้าย: ข้อมูลร้าน -->
       <div class="info-details">
-        <h2>รายละเอียดร้าน</h2>
+        <h2 data-th="รายละเอียดร้าน" data-en="Shop Details">รายละเอียดร้าน</h2>
 
         <!-- ที่อยู่ -->
         <div class="info-block">
-          <h3>📍 ที่อยู่</h3>
-          <p>123 ถนน Placeholder<br />
+          <h3 data-th="📍 ที่อยู่" data-en="📍 Address">📍 ที่อยู่</h3>
+          <p data-th="123 ถนน Placeholder<br />แขวง/ตำบล Placeholder<br />เขต/อำเภอ Placeholder<br />กรุงเทพฯ 10000" data-en="123 Placeholder Rd<br />Sub-district Placeholder<br />District Placeholder<br />Bangkok 10000">123 ถนน Placeholder<br />
              แขวง/ตำบล Placeholder<br />
              เขต/อำเภอ Placeholder<br />
              กรุงเทพฯ 10000</p>
@@ -46,18 +47,27 @@
 
         <!-- เวลาเปิด-ปิด -->
         <div class="info-block">
-          <h3>🕐 เวลาเปิด-ปิด</h3>
+          <h3 data-th="🕐 เวลาเปิด-ปิด" data-en="🕐 Opening Hours">🕐 เวลาเปิด-ปิด</h3>
           <ul class="hours-list">
-            <li><span>จันทร์ – ศุกร์</span><span>08:00 – 18:00 น.</span></li>
-            <li><span>เสาร์ – อาทิตย์</span><span>09:00 – 19:00 น.</span></li>
-            <li><span>วันหยุดนักขัตฤกษ์</span><span>ปิดทำการ</span></li>
+            <li>
+              <span data-th="จันทร์ – ศุกร์" data-en="Mon – Fri">จันทร์ – ศุกร์</span>
+              <span data-th="08:00 – 18:00 น." data-en="08:00 – 18:00">08:00 – 18:00 น.</span>
+            </li>
+            <li>
+              <span data-th="เสาร์ – อาทิตย์" data-en="Sat – Sun">เสาร์ – อาทิตย์</span>
+              <span data-th="09:00 – 19:00 น." data-en="09:00 – 19:00">09:00 – 19:00 น.</span>
+            </li>
+            <li>
+              <span data-th="วันหยุดนักขัตฤกษ์" data-en="Public Holidays">วันหยุดนักขัตฤกษ์</span>
+              <span data-th="ปิดทำการ" data-en="Closed">ปิดทำการ</span>
+            </li>
           </ul>
         </div>
 
         <!-- ติดต่อ -->
         <div class="info-block">
-          <h3>📞 ติดต่อ</h3>
-          <p>โทร: 0X-XXXX-XXXX<br />
+          <h3 data-th="📞 ติดต่อ" data-en="📞 Contact">📞 ติดต่อ</h3>
+          <p data-th="โทร: 0X-XXXX-XXXX<br />Email: email@placeholder.com<br />Line ID: @placeholder" data-en="Tel: 0X-XXXX-XXXX<br />Email: email@placeholder.com<br />Line ID: @placeholder">โทร: 0X-XXXX-XXXX<br />
              Email: email@placeholder.com<br />
              Line ID: @placeholder</p>
         </div>
@@ -65,10 +75,10 @@
 
       <!-- คอลัมน์ขวา: แผนที่ placeholder -->
       <div class="info-map">
-        <h2>แผนที่</h2>
+        <h2 data-th="แผนที่" data-en="Map">แผนที่</h2>
         <div class="map-placeholder">
-          [ Google Map Placeholder ]<br />
-          <small>ฝัง iframe แผนที่จริงตรงนี้</small>
+          <span data-th="[ Google Map Placeholder ]" data-en="[ Google Map Placeholder ]">[ Google Map Placeholder ]</span><br />
+          <small data-th="ฝัง iframe แผนที่จริงตรงนี้" data-en="Embed a real map iframe here">ฝัง iframe แผนที่จริงตรงนี้</small>
         </div>
       </div>
 
@@ -78,43 +88,39 @@
   <!-- ===== MENU TABLE ===== -->
   <section class="menu-section">
     <div class="container">
-      <h2>เมนูกาแฟ</h2>
+      <h2 data-th="เมนูกาแฟ" data-en="Coffee Menu">เมนูกาแฟ</h2>
       <table class="menu-table">
         <thead>
           <tr>
             <th>#</th>
-            <th>ชื่อเมนู</th>
-            <th>คำอธิบาย</th>
-            <th>ราคา (บาท)</th>
+            <th data-th="ชื่อเมนู" data-en="Item">ชื่อเมนู</th>
+            <th data-th="คำอธิบาย" data-en="Description">คำอธิบาย</th>
+            <th data-th="ราคา (บาท)" data-en="Price (THB)">ราคา (บาท)</th>
           </tr>
         </thead>
         <tbody>
-          <!-- แถวที่ 1 -->
           <tr>
             <td>1</td>
-            <td>เมนู Placeholder A</td>
-            <td>Lorem ipsum คำอธิบายเมนูสั้น ๆ</td>
+            <td data-th="เมนู Placeholder A" data-en="Menu Placeholder A">เมนู Placeholder A</td>
+            <td data-th="Lorem ipsum คำอธิบายเมนูสั้น ๆ" data-en="Lorem ipsum short menu description">Lorem ipsum คำอธิบายเมนูสั้น ๆ</td>
             <td>XX</td>
           </tr>
-          <!-- แถวที่ 2 -->
           <tr>
             <td>2</td>
-            <td>เมนู Placeholder B</td>
-            <td>Lorem ipsum คำอธิบายเมนูสั้น ๆ</td>
+            <td data-th="เมนู Placeholder B" data-en="Menu Placeholder B">เมนู Placeholder B</td>
+            <td data-th="Lorem ipsum คำอธิบายเมนูสั้น ๆ" data-en="Lorem ipsum short menu description">Lorem ipsum คำอธิบายเมนูสั้น ๆ</td>
             <td>XX</td>
           </tr>
-          <!-- แถวที่ 3 -->
           <tr>
             <td>3</td>
-            <td>เมนู Placeholder C</td>
-            <td>Lorem ipsum คำอธิบายเมนูสั้น ๆ</td>
+            <td data-th="เมนู Placeholder C" data-en="Menu Placeholder C">เมนู Placeholder C</td>
+            <td data-th="Lorem ipsum คำอธิบายเมนูสั้น ๆ" data-en="Lorem ipsum short menu description">Lorem ipsum คำอธิบายเมนูสั้น ๆ</td>
             <td>XX</td>
           </tr>
-          <!-- แถวที่ 4 -->
           <tr>
             <td>4</td>
-            <td>เมนู Placeholder D</td>
-            <td>Lorem ipsum คำอธิบายเมนูสั้น ๆ</td>
+            <td data-th="เมนู Placeholder D" data-en="Menu Placeholder D">เมนู Placeholder D</td>
+            <td data-th="Lorem ipsum คำอธิบายเมนูสั้น ๆ" data-en="Lorem ipsum short menu description">Lorem ipsum คำอธิบายเมนูสั้น ๆ</td>
             <td>XX</td>
           </tr>
         </tbody>
@@ -122,14 +128,15 @@
     </div>
   </section>
 
-  <!-- ===== FOOTER (เดียวกับ index.html) ===== -->
+  <!-- ===== FOOTER ===== -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p><strong>ชื่อร้านกาแฟ</strong></p>
-      <p>📍 ที่อยู่ร้าน — 123 ถนน Placeholder แขวง/ตำบล เขต/อำเภอ กรุงเทพฯ 10000</p>
-      <p>📞 โทร: 0X-XXXX-XXXX &nbsp;|&nbsp; ✉️ email@placeholder.com</p>
+      <p><strong data-th="ชื่อร้านกาแฟ" data-en="Coffee Shop Name">ชื่อร้านกาแฟ</strong></p>
+      <p data-th="📍 ที่อยู่ร้าน — 123 ถนน Placeholder แขวง/ตำบล เขต/อำเภอ กรุงเทพฯ 10000" data-en="📍 Shop Address — 123 Placeholder Rd, Sub-district, District, Bangkok 10000">📍 ที่อยู่ร้าน — 123 ถนน Placeholder แขวง/ตำบล เขต/อำเภอ กรุงเทพฯ 10000</p>
+      <p>📞 0X-XXXX-XXXX &nbsp;|&nbsp; ✉️ email@placeholder.com</p>
     </div>
   </footer>
 
+  <script src="lang.js"></script>
 </body>
 </html>

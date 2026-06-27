@@ -40,7 +40,7 @@ ul {
    HEADER
    ============================================================ */
 .site-header {
-  background: #d6ccc2;        /* placeholder สี header */
+  background: #d6ccc2;
   border-bottom: 2px solid #999;
   padding: 12px 0;
 }
@@ -61,6 +61,7 @@ ul {
 /* ----- NAV ----- */
 .nav {
   display: flex;
+  align-items: center;
   gap: 16px;
 }
 
@@ -75,12 +76,31 @@ ul {
   background: #bbb;
 }
 
+/* ----- LANGUAGE TOGGLE BUTTON ----- */
+.lang-toggle {
+  padding: 4px 12px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  transition: background 0.2s;
+  line-height: 1.6;
+}
+
+.lang-toggle:hover {
+  background: #555;
+}
+
 
 /* ============================================================
    HERO (index.html)
    ============================================================ */
 .hero {
-  background: #e9e0d5;        /* placeholder สี hero */
+  background: #e9e0d5;
   border-bottom: 2px dashed #aaa;
   padding: 60px 0;
 }
@@ -205,7 +225,7 @@ ul {
 /* ----- 2-COLUMN GRID ----- */
 .info-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;  /* ซ้าย | ขวา */
+  grid-template-columns: 1fr 1fr;
   gap: 32px;
   align-items: start;
 }
@@ -347,7 +367,7 @@ ul {
     grid-template-columns: 1fr;
   }
 
-  /* Info: 2 คอลัมน์ → 1 คอลัมน์ (ซ้ายก่อน ขวาทีหลัง) */
+  /* Info: 2 คอลัมน์ → 1 คอลัมน์ */
   .info-grid {
     grid-template-columns: 1fr;
   }
@@ -359,5 +379,11 @@ ul {
 
   .menu-table {
     min-width: 480px;
+  }
+
+  /* Nav wrap on mobile */
+  .nav {
+    flex-wrap: wrap;
+    gap: 8px;
   }
 }
