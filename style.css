@@ -1,0 +1,363 @@
+/* ============================================================
+   style.css — Coffee Shop Skeleton
+   โครงสร้าง CSS สำหรับ 2 หน้า: index.html & info.html
+   ============================================================ */
+
+/* ----- RESET & BASE ----- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #222;
+  background: #f9f9f9;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ----- CONTAINER ----- */
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.site-header {
+  background: #d6ccc2;        /* placeholder สี header */
+  border-bottom: 2px solid #999;
+  padding: 12px 0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* ----- NAV ----- */
+.nav {
+  display: flex;
+  gap: 16px;
+}
+
+.nav a {
+  padding: 4px 8px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.nav a:hover {
+  background: #bbb;
+}
+
+
+/* ============================================================
+   HERO (index.html)
+   ============================================================ */
+.hero {
+  background: #e9e0d5;        /* placeholder สี hero */
+  border-bottom: 2px dashed #aaa;
+  padding: 60px 0;
+}
+
+.hero-inner {
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.hero-sub {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 24px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ----- CTA BUTTON ----- */
+.btn-cta {
+  display: inline-block;
+  padding: 10px 24px;
+  background: #333;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.btn-cta:hover {
+  background: #555;
+}
+
+
+/* ============================================================
+   FEATURES SECTION (index.html)
+   ============================================================ */
+.features {
+  padding: 48px 0;
+  background: #fff;
+  border-bottom: 2px dashed #ccc;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 32px;
+  font-size: 1.4rem;
+}
+
+/* ----- 3-COLUMN GRID ----- */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ----- FEATURE CARD ----- */
+.feature-card {
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  padding: 24px 16px;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+.feature-icon {
+  width: 56px;
+  height: 56px;
+  border: 2px dashed #999;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.feature-card h3 {
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.feature-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+
+/* ============================================================
+   PAGE TITLE (info.html)
+   ============================================================ */
+.page-title {
+  background: #e9e0d5;
+  border-bottom: 2px dashed #aaa;
+  padding: 32px 0;
+}
+
+.page-title h1 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.page-title p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+
+/* ============================================================
+   SHOP INFO — 2-COLUMN LAYOUT (info.html)
+   ============================================================ */
+.shop-info {
+  padding: 48px 0;
+  background: #fff;
+  border-bottom: 2px dashed #ccc;
+}
+
+/* ----- 2-COLUMN GRID ----- */
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* ซ้าย | ขวา */
+  gap: 32px;
+  align-items: start;
+}
+
+/* ----- LEFT: ข้อมูลร้าน ----- */
+.info-details h2 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+.info-block {
+  margin-bottom: 24px;
+}
+
+.info-block h3 {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.info-block p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* ----- HOURS LIST ----- */
+.hours-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  border-bottom: 1px dotted #ddd;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* ----- RIGHT: แผนที่ ----- */
+.info-map h2 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 240px;
+  background: #ddd;
+  border: 2px dashed #999;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 2;
+}
+
+
+/* ============================================================
+   MENU TABLE (info.html)
+   ============================================================ */
+.menu-section {
+  padding: 48px 0;
+  background: #f9f9f9;
+  border-bottom: 2px dashed #ccc;
+}
+
+.menu-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.menu-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.menu-table thead {
+  background: #d6ccc2;
+}
+
+.menu-table th,
+.menu-table td {
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.menu-table tbody tr:nth-child(even) {
+  background: #f0ece8;
+}
+
+.menu-table tbody tr:hover {
+  background: #e6dfd8;
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer {
+  background: #d6ccc2;
+  border-top: 2px solid #999;
+  padding: 24px 0;
+}
+
+.footer-inner {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #444;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+
+/* ============================================================
+   RESPONSIVE — MOBILE (max-width: 600px)
+   ============================================================ */
+@media (max-width: 600px) {
+
+  /* Hero */
+  .hero {
+    padding: 40px 0;
+  }
+
+  .hero-title {
+    font-size: 1.4rem;
+  }
+
+  /* Features: 3 คอลัมน์ → 1 คอลัมน์ */
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Info: 2 คอลัมน์ → 1 คอลัมน์ (ซ้ายก่อน ขวาทีหลัง) */
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Table scroll แนวนอนบน mobile */
+  .menu-section {
+    overflow-x: auto;
+  }
+
+  .menu-table {
+    min-width: 480px;
+  }
+}
